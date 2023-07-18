@@ -9,7 +9,7 @@ public class PeopleAlsoBoughtResult {
 
     private String stockUid;
 
-    private String symbol;
+    private String stockSymbol;
 
     private Long buyCount;
 

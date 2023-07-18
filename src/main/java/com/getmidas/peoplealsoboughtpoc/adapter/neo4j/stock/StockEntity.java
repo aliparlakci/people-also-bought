@@ -17,11 +17,11 @@ public class StockEntity {
     private String stockUid;
 
     @Property("name")
-    private String symbol;
+    private String stockSymbol;
 
     public Stock toModel() {
         return Stock.builder()
-                .symbol(this.symbol)
+                .symbol(this.stockSymbol)
                 .stockUid(this.stockUid)
                 .build();
     }

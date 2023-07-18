@@ -9,7 +9,7 @@ import java.util.Optional;
 
 public interface StockRepository extends Neo4jRepository<StockEntity, String> {
 
-    @Query("MATCH (s1:Stock {stock_uid: $stockUid})<-[:BUYS]-(t:Member)-[:BUYS]->(s2:Stock) RETURN s2.stock_uid AS stock_uid, s2.name AS symbol, COUNT(DISTINCT t) AS buyCount ORDER BY buyCount DESC LIMIT 5")
+    @Query("MATCH (s1:Stock {stock_uid: $stockUid})<-[:BUYS]-(t:Member)-[:BUYS]->(s2:Stock) RETURN s2.stock_uid AS stock_uid, s2.name AS stockSymbol, COUNT(DISTINCT t) AS buyCount ORDER BY buyCount DESC LIMIT 5")
     List<PeopleAlsoBoughtResult> getPeopleAlsoBought(String stockUid);
 
     Optional<StockEntity> findByStockUid(String stockUid);

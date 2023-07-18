@@ -34,7 +34,7 @@ public class StockNeo4jJpaAdapter implements StockPersistencePort {
     @Override
     public void create(String stockUid, String symbol) {
         StockEntity stockEntity = new StockEntity();
-        stockEntity.setSymbol(symbol);
+        stockEntity.setStockSymbol(symbol);
         stockEntity.setStockUid(stockUid);
         stockRepository.save(stockEntity);
     }
