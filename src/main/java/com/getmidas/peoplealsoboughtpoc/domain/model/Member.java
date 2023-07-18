@@ -9,8 +9,6 @@ import java.util.List;
 @Builder
 public class Member {
 
-    private String id;
-
     private String memberUid;
 
     private List<Stock> stocks;

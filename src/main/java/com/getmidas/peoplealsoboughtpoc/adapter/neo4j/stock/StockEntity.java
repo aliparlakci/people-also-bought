@@ -13,8 +13,6 @@ import org.springframework.data.neo4j.core.schema.Property;
 public class StockEntity {
 
     @Id
-    private String id;
-
     @Property("stock_uid")
     private String stockUid;
 
@@ -23,7 +21,6 @@ public class StockEntity {
 
     public Stock toModel() {
         return Stock.builder()
-                .id(this.id)
                 .symbol(this.symbol)
                 .stockUid(this.stockUid)
                 .build();

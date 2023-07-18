@@ -7,9 +7,8 @@ import lombok.Getter;
 @Builder
 public class Stock {
 
-    private String id;
-
     private String symbol;
 
     private String stockUid;
+
 }

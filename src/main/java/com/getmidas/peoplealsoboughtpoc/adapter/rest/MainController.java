@@ -36,4 +36,5 @@ public class MainController {
     public void memberBuysStock(@PathVariable String memberUid, @PathVariable String stockUid) {
         stockService.memberBuysStock(memberUid, stockUid);
     }
+
 }

@@ -15,9 +15,6 @@ import java.util.Set;
 public class MemberEntity {
 
     @Id
-    @GeneratedValue
-    private String id;
-
     @Property("member_uid")
     private String memberUid;
 
@@ -26,7 +23,6 @@ public class MemberEntity {
 
     public Member toModel() {
         return Member.builder()
-                .id(this.id)
                 .memberUid(this.memberUid)
                 .stocks(this.stocks.stream().map(StockEntity::toModel).toList())
                 .build();
